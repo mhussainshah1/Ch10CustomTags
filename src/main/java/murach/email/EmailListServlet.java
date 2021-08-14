@@ -51,7 +51,6 @@ public class EmailListServlet extends HttpServlet {
                 url = "/thanks.jsp";
             }
         }
-
         getServletContext().getRequestDispatcher(url).forward(request, response);
     }
 

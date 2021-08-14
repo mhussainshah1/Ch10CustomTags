@@ -38,6 +38,8 @@
 
 <p>The current date is <mma:currentDate /> </p>
 
+<p>The current time is <mma:currentTime /> </p>
+
 <mma:ifWeekday>
     <p>Live support available at 1-800-555-2222</p>
 </mma:ifWeekday>

@@ -5,15 +5,17 @@ import jakarta.servlet.jsp.JspWriter;
 import jakarta.servlet.jsp.tagext.TagSupport;
 
 import java.io.IOException;
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class CurrentDateTag extends TagSupport {
 
     @Override
     public int doStartTag() throws JspException {
         LocalDate currentDate = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
         String currentDateFormatted = currentDate.format(formatter);
 
 //        Date currentDate = new Date();
